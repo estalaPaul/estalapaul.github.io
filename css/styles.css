@@ -1,0 +1,102 @@
+/* GENERAL STYLES */
+body {
+  background-color: black;
+  height: 100vh;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* FIRST CONTAINER STYLES */
+div.intro > div > h2 span {
+  font-size: 1rem;
+  opacity: 0;
+}
+div.intro > div > h2 > span:nth-child(1) {
+  animation: dLetters 400ms forwards 1;
+}
+div.intro > div > h2 span:nth-child(2) {
+  animation: dLetters 400ms forwards 200ms 1;
+}
+div.intro > div > h2 span:nth-child(3) {
+  animation: dLetters 400ms forwards 400ms 1;
+}
+div.intro > div > h2 span:nth-child(4) {
+  animation: dLetters 400ms forwards 600ms 1;
+}
+div.intro > div > h2 span:nth-child(5) {
+  animation: dLetters 400ms forwards 800ms 1;
+}
+div.intro > div > h2 span:nth-child(6) {
+  animation: dLetters 400ms forwards 1000ms 1;
+}
+div.intro > div > h2 span:nth-child(7) {
+  animation: dLetters 400ms forwards 1200ms 1;
+}
+div.intro > div > h2 span:nth-child(8) {
+  animation: dLetters 400ms forwards 1400ms 1;
+}
+div.intro > div > h2 span:nth-child(9) {
+  animation: dLetters 400ms forwards 1600ms 1;
+}
+
+div.links div > a {
+  animation: linksFadeIn 1s forwards 2000ms 1;
+  background-color: rgba(85, 85, 85, 1);
+  border-radius: 3px;
+  color: white;
+  display: block;
+  height: 8vh;
+  line-height: 8vh;
+  margin: auto;
+  outline: 0;
+  width: 90%;
+  opacity: 0;
+}
+div.links div:nth-child(2) > a {
+  background-color: rgba(85, 85, 85, .6);
+}
+div.links div:nth-child(3) > a {
+  background-color: rgba(85, 85, 85, .3);
+}
+
+/* PROJECTS CONTAINER STYLES */
+div#projects {
+  height: 100vh;
+  width: 100vw;
+}
+div#projects > div > h2 {
+  color: white;
+}
+div#projects > div > div > div.card {
+  background-color: rgba(85, 85, 85, 1);
+  height: 400px;
+  color: white;
+}
+
+/* ALL ANIMATIONS */
+@keyframes linksFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes dLetters {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 900px) {
+  div#projects > div > div > div.card {
+    background-color: rgba(85, 85, 85, 1);
+    height: auto;
+    color: white;
+  }
+}
