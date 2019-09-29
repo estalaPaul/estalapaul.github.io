@@ -1,76 +1,145 @@
 /* GENERAL STYLES */
 body {
   background-color: black;
+  color: #fff;
   height: 100vh;
+  margin: 0px;
+  padding: 0px;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  font-family: 'Nunito'
+}
+h1, h2 {
+  font-family: 'Roboto';
+  font-weight: 400;
+}
+h1 {
+  letter-spacing: .5rem;
+}
+.container {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+}
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.stacked-row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* FIRST CONTAINER STYLES */
-div.intro > div > h2 span {
+#intro h2 span {
   font-size: 1rem;
   opacity: 0;
 }
-div.intro > div > h2 > span:nth-child(1) {
+#intro h2 span:nth-child(1) {
   animation: dLetters 400ms forwards 1;
 }
-div.intro > div > h2 span:nth-child(2) {
+#intro h2 span:nth-child(2) {
   animation: dLetters 400ms forwards 200ms 1;
 }
-div.intro > div > h2 span:nth-child(3) {
+#intro h2 span:nth-child(3) {
   animation: dLetters 400ms forwards 400ms 1;
 }
-div.intro > div > h2 span:nth-child(4) {
+#intro h2 span:nth-child(4) {
   animation: dLetters 400ms forwards 600ms 1;
 }
-div.intro > div > h2 span:nth-child(5) {
+#intro h2 span:nth-child(5) {
   animation: dLetters 400ms forwards 800ms 1;
 }
-div.intro > div > h2 span:nth-child(6) {
+#intro h2 span:nth-child(6) {
   animation: dLetters 400ms forwards 1000ms 1;
 }
-div.intro > div > h2 span:nth-child(7) {
+#intro h2 span:nth-child(7) {
   animation: dLetters 400ms forwards 1200ms 1;
 }
-div.intro > div > h2 span:nth-child(8) {
+#intro h2 span:nth-child(8) {
   animation: dLetters 400ms forwards 1400ms 1;
 }
-div.intro > div > h2 span:nth-child(9) {
+#intro h2 span:nth-child(9) {
   animation: dLetters 400ms forwards 1600ms 1;
 }
-
-div.links div > a {
+#links {
+  margin-top: 30%;
+}
+#links > a {
   animation: linksFadeIn 1s forwards 2000ms 1;
   background-color: rgba(85, 85, 85, 1);
   border-radius: 3px;
   color: white;
   display: block;
-  height: 8vh;
-  line-height: 8vh;
-  margin: auto;
+  height: 60px;
+  line-height: 60px;
+  width: 350px;
   outline: 0;
-  width: 90%;
   opacity: 0;
+  text-align: center;
+  text-decoration: none;
 }
-div.links div:nth-child(2) > a {
+#links > a:nth-child(2) {
   background-color: rgba(85, 85, 85, .6);
+  margin-right: 20px;
+  margin-left: 20px;
 }
-div.links div:nth-child(3) > a {
+#links > a:nth-child(3) {
   background-color: rgba(85, 85, 85, .3);
 }
 
 /* PROJECTS CONTAINER STYLES */
-div#projects {
-  height: 100vh;
-  width: 100vw;
+#projects .row {
+  height: 100%;
+  align-items: center;
 }
-div#projects > div > h2 {
-  color: white;
+#projects > .row .project-card:first-child {
+  margin-right:25px;
 }
-div#projects > div > div > div.card {
-  background-color: rgba(85, 85, 85, 1);
+#projects > .row .project-card:nth-child(2) {
+  margin-right: 25px;
+  margin-left: 25px;
+}
+#projects > .row .project-card:last-child {
+  margin-left: 25px;
+}
+.project-card {
+  text-align: center;
   height: 400px;
-  color: white;
+  width: 33%;
+  padding: 10px;
+  transition: background-color .5s;
+}
+.project-card:hover {
+  background-color: rgba(85, 85, 85, .3)
+}
+.project-card > .project-card-image {
+  width: 100%;
+  height: 35%;
+  background-size: cover; 
+  background-position: center;
+}
+.project-card #github {
+  background-image: url('../img/githubFinder.png');
+}
+.project-card #weather {
+  background-image: url('../img/weather.png');
+}
+.project-card #gtcli {
+  background-image: url('../img/gtcli.png');
+}
+.project-card p {
+  margin-bottom: 30px;
+}
+.project-card a {
+  background-color: rgba(85, 85, 85, .3);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 30px;
+  border-radius: 3px;
 }
 
 /* ALL ANIMATIONS */
@@ -93,10 +162,39 @@ div#projects > div > div > div.card {
 
 
 /* MEDIA QUERIES */
-@media only screen and (max-width: 900px) {
-  div#projects > div > div > div.card {
-    background-color: rgba(85, 85, 85, 1);
+@media only screen and (max-width: 800px) {
+  #links {
+    margin-top: 40%;
+  }
+  #projects > .row {
+    flex-direction: column;
     height: auto;
-    color: white;
+  } 
+  .project-card {
+    width: 100%;
+    flex-basis: 400px;
+    margin: 20px 20px;
+  }
+  .project-card > .project-card-image {
+    height: 50%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #links {
+    width: 95%;
+    margin-top: 80%;
+  }
+  #projects > .row {
+    flex-direction: column;
+    height: auto;
+  } 
+  .project-card {
+    width: 100%;
+    flex-basis: 400px;
+    margin: 20px 20px;
+  }
+  .project-card > .project-card-image {
+    background-size: cover;
+    background-position: center;
   }
 }
