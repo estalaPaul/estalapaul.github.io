@@ -3,7 +3,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-color: black;
+  background-color: #292c35;
   color: #fff;
   height: 100vh;
   margin: 0px;
@@ -14,6 +14,7 @@ body {
 h1, h2 {
   font-family: 'Roboto';
   font-weight: 400;
+  margin-top: 40px;
 }
 h1 {
   letter-spacing: .5rem;
@@ -90,7 +91,11 @@ h1 {
   margin-left: 20px;
 }
 #links > a:nth-child(3) {
-  background-color: rgba(85, 85, 85, .3);
+  background-color: rgba(85, 85, 85, .4);
+  margin-right: 20px;
+}
+#links > a:nth-child(4) {
+  background-color: rgba(85, 85, 85, .2);
 }
 
 /* PROJECTS CONTAINER STYLES */
@@ -127,8 +132,8 @@ h1 {
 .project-card #github {
   background-image: url('../img/githubFinder.png');
 }
-.project-card #weather {
-  background-image: url('../img/weather.png');
+.project-card #start-page {
+  background-image: url('../img/start-page.png');
 }
 .project-card #gtcli {
   background-image: url('../img/gtcli.png');
@@ -172,6 +177,13 @@ h1 {
     flex-direction: column;
     height: auto;
   } 
+  #links > a:nth-child(2) {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  #links > a:nth-child(3) {
+    margin-right: 10px;
+  }
   .project-card {
     width: 100%;
     flex-basis: 400px;
