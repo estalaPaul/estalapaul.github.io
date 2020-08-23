@@ -69,7 +69,7 @@ h1 {
   animation: dLetters 400ms forwards 1600ms 1;
 }
 #links {
-  margin-top: 30%;
+  margin-top: 25%;
 }
 #links > a {
   animation: linksFadeIn 1s forwards 2000ms 1;
