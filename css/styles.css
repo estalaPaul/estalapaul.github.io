@@ -138,6 +138,9 @@ h1 {
 .project-card #gtcli {
   background-image: url('../img/gtcli.png');
 }
+.project-card #weather {
+  background-image: url('../img/weather.png');
+}
 .project-card p {
   margin-bottom: 30px;
 }
