@@ -14,15 +14,21 @@ body {
 h1, h2 {
   font-family: 'Roboto';
   font-weight: 400;
-  margin-top: 40px;
 }
 h1 {
   letter-spacing: .5rem;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+h2 {
+  letter-spacing: .1rem;
+  margin-top: 0px;
 }
 .container {
   width: 90%;
   height: 100%;
   margin: auto;
+  text-align: center;
 }
 .row {
   width: 100%;
@@ -38,7 +44,15 @@ h1 {
 
 /* FIRST CONTAINER STYLES */
 #intro h2 span {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  opacity: 0;
+}
+#intro p.desc {
+  font-size: 1.3rem;
+  opacity: 0;
+}
+#intro h3 {
+  font-size: 1.6rem;
   opacity: 0;
 }
 #intro h2 span:nth-child(1) {
@@ -68,8 +82,14 @@ h1 {
 #intro h2 span:nth-child(9) {
   animation: dLetters 400ms forwards 1600ms 1;
 }
+#intro p.desc {
+  animation: dLetters 400ms forwards 1800ms 1;
+}
+#intro h3 {
+  animation: dLetters 400ms forwards 1800ms 1;
+}
 #links {
-  margin-top: 25%;
+  margin-top: 150px;
 }
 #links > a {
   animation: linksFadeIn 1s forwards 2000ms 1;
@@ -152,6 +172,25 @@ h1 {
   border-radius: 3px;
 }
 
+/* SKILLS STYLES */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+}
+.skills p {
+  width: 200px;
+  height: 60px;
+  margin: 1%;
+  line-height: 60px;
+  border-radius: 3px;
+  text-decoration: underline;
+  font-size: 1.3rem;
+  opacity: 0;
+  animation: dLetters 400ms forwards 1800ms 1;
+}
+
 /* ALL ANIMATIONS */
 @keyframes linksFadeIn {
   0% {
@@ -174,7 +213,10 @@ h1 {
 /* MEDIA QUERIES */
 @media only screen and (max-width: 800px) {
   #links {
-    margin-top: 40%;
+    margin-top: 70px;
+  }
+  .skills p {
+    width: 20%;
   }
   #projects > .row {
     flex-direction: column;
@@ -199,12 +241,18 @@ h1 {
 @media only screen and (max-width: 600px) {
   #links {
     width: 95%;
-    margin-top: 80%;
+    margin-top: 20px;
   }
   #projects > .row {
     flex-direction: column;
     height: auto;
   } 
+  .skills {
+    width: 100%;
+  }
+  .skills p {
+    width: 30%;
+  }
   .project-card {
     width: 100%;
     flex-basis: 400px;
